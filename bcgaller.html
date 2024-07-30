@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Gallery - Visit British Columbia </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="project.css">
+    <style>
+        h4{width: 100%;}
+    </style>
+     <script>
+        var slideIndex = 1;
+showSlides(slideIndex);
+
+
+
+
+function plusDivs(n) {
+  showSlides(slideIndex += n);
+}
+
+
+
+
+
+
+
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+
+
+
+
+
+
+    </script>
+</head>
+
+
+
+<body>
+
+    <div id="wrapper">
+      <header>
+        <a href="bchome.html">
+            <h1>Visit British Columbia</h1>
+        </a>
+    </header>
+        <nav>
+            <ul>
+              <li><a href="bchome.html">Home</a></li>
+
+              <li><a href="bcactivities.html">Activities</a></li>
+
+              <li><a href="bcgaller.html">Gallery</a></li>
+
+              <li><a href="bcbooking.html">Book a Trip!</a></li>
+
+            </ul>
+        </nav>
+
+        <main>
+
+            <div id="heroguitar"></div>
+
+            <h2>Welcome To Our Gallery Page!</h2>
+
+            <p>
+                Gallery is updated every 2 weeks! Send your own image for it to be displayed on our page!
+                There is an Image voting at the end of the year! Subsribe to our email to be updated! Click on an image below to view gallery.
+            </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+        <img src="bc1.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+        <img src="bc2.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+        <img src="bc3.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+        <img src="bc4.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+        <img src="bc5.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+        <img src="bc6.jpg" style="width:100%">
+    </div>
+  
+  
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+  
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+  
+
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="bc1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Vancouver Sands by Carla Sanchez">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="bc2.jpg" style="width:100%" onclick="currentSlide(2)" alt="A walk on sunlight by Terry Rozier">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="bc3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Cabin by the Lake by Jason Williams">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="bc4.jpg" style="width:100%" onclick="currentSlide(4)" alt="BC's Mountain Range by Sandra Wilkins">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="bc5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Our Mother Vancouver by Armaan Singh">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="bc6.jpg" style="width:100%" onclick="currentSlide(6)" alt="The Heart of British Columbia by Daniel Ngyuen">
+      </div>
+    </div>
+  </div>
+
+
+<br>
+
+
+
+  <form method="post" action="https://webdevbasics.net/scripts/
+  javajam8.php">
+  <fieldset>
+    <legend>Upload a photo for a chance to be displayed!:</legend>
+
+    <label for="MyEmail">Email:</label><input type="text" name="MyEmail" required>
+    <br>
+    <label for="myfile">Upload Your Image:</label>
+    <input type="file" id="myfile" name="myfile">
+
+      
+
+   
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </fieldset>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+            <div class="details">
+
+
+
+
+         
+
+
+            <br>
+
+        </main>
+
+        <footer>
+          Copyright &copy; 2024 Government of Canada
+          <br>
+          <a href="mailto:azadhelmy@gmail.com">visitbc@gov.com</a>
+          <br>
+          <a id="mobile" href="tel:888-555-5555">888-555-5555</a>
+          <span id="desktop">888-555-5555</span>
+
+      </footer>
+
+</body>
+
+</div>
+
+</html>
